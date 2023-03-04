@@ -123,9 +123,12 @@ if __name__ == '__main__':
     inicial1 = 'A'
     
     print(tam(grafo)+1)
+    start = timeit.default_timer()
     #print(edges(grafo)) #<-------------imprime lista del grafo random  (descomentar el codigo de arriba)
-    #prueba(grafo, inicial, final)
-    
+    prueba(grafo, inicial, final)
+    end = timeit.default_timer()
+    print("Terminado en --- %s segundos ---" % (end - start))
+    start = timeit.default_timer()
     print(dfs(grafo,inicial))
     end = timeit.default_timer()
     print("Terminado en --- %s segundos ---" % (end - start))
